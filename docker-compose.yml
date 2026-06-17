@@ -1,0 +1,16 @@
+services:
+  back:
+    build: ./back
+    container_name: find-your-vibe-back
+    ports:
+      - "8000:8000"
+    restart: always
+
+  front:
+    build: ./front
+    container_name: find-your-vibe-front
+    ports:
+      - "8501:8501"
+    depends_on:
+      - back
+    restart: always
