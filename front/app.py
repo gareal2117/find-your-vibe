@@ -22,7 +22,7 @@ tempo = st.selectbox(
 if st.button("Recommend"):
 
     response = requests.post(
-        "http://127.0.0.1:8000/recommend",
+        "http://back:8000/recommend",
         json={
             "mood": mood,
             "activity": activity,
